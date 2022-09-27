@@ -1,20 +1,16 @@
 import { NavLink } from 'react-router-dom';
+import './nav.css';
 
 const Nav = () => (
-  <nav>
-    <h1>nav bar</h1>
-    <ul>
-      <li>
-        <NavLink to="/">Rockets </NavLink>
-      </li>
-      <li>
-        <NavLink to="/missions">Missions </NavLink>
-      </li>
-      <li>
-        {' '}
-        <NavLink to="/profile">My Profle </NavLink>
-      </li>
-    </ul>
+  <nav className="Nav_Bar">
+    <h1>Space Travelers Hub</h1>
+    <div className="Nav_Bar_Container">
+      <NavLink className="Nav_Bar_Links" to="/Rockets">Rockets </NavLink>
+      <NavLink className="Nav_Bar_Links" to="/missions">Missions </NavLink>
+      <hr className="Nav_Bar_hr" />
+      <NavLink className="Nav_Bar_Links" to="/profile">My Profle </NavLink>
+    </div>
   </nav>
 );
+
 export default Nav;
