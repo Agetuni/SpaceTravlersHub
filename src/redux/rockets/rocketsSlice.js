@@ -5,6 +5,7 @@ const getRockets = createAsyncThunk('rockets/getRockets', async () => {
   const rocketsList = await response.json();
   return rocketsList;
 });
+
 const initialState = [];
 
 const rocketsSlice = createSlice({
