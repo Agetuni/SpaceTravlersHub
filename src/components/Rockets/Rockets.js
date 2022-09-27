@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Container from 'react-bootstrap/Container';
+import { useEffect } from 'react';
 import { getRockets } from '../../redux/rockets/rocketsSlice';
 import Rocket from './Rocket';
 
@@ -12,11 +13,11 @@ const Rockets = () => {
     }
   });
   return (
-    <div className="Rockets">
+    <Container>
       {rocketsData.map((rocketData) => (
         <Rocket key={rocketData.id} rocket={rocketData} />
       ))}
-    </div>
+    </Container>
   );
 };
 export default Rockets;
