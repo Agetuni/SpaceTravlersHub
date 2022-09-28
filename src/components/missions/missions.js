@@ -20,7 +20,7 @@ const Missions = () => {
   ));
 
   return (
-    <table>
+    <table className="table table-bordered border-Secondary container">
       <thead className="thead">
         <tr>
           <th> Mission </th>

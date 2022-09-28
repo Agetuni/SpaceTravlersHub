@@ -14,16 +14,16 @@ const Mission = (props) => {
   return (
     <tbody className="Container_missions">
       <tr>
-        <td>{mission.mission_name}</td>
-        <td>{mission.description}</td>
+        <td className="h6">{mission.mission_name}</td>
+        <td className="col-9">{mission.description}</td>
 
-        <td>
-          {mission.reserved ? <Badge bg="secondary">NOT A MEMBER</Badge> : <Badge bg="info">Active Member</Badge>}
+        <td className="align-middle ">
+          {mission.reserved ? <Badge bg="info">Active Member</Badge> : <Badge bg="secondary">NOT A MEMBER</Badge>}
         </td>
-        <td>
+        <td className="align-middle col-1">
 
           <Button
-            variant={mission.reserved ? 'outline-primary' : 'primary'}
+            variant={mission.reserved ? 'outline-danger mx-0 p-0' : 'outline-secondary mx-1 p-0'}
             size="sm"
             onClick={() => dispatch(joinMission(mission.mission_id))}
           >
