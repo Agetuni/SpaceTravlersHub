@@ -10,6 +10,7 @@ const Mission = (props) => {
     </tr>
   );
 };
+
 Mission.propTypes = {
   mission: PropTypes.shape({
     mission_id: PropTypes.string,
