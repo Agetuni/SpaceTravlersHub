@@ -5,3 +5,7 @@ body {
 table {
   border: 1px solid black;
 }
+
+.thead {
+  border: 1px solid #000;
+}

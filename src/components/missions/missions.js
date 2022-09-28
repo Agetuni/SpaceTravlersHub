@@ -7,26 +7,32 @@ import './missions.css';
 const Missions = () => {
   const dispatch = useDispatch();
   const missionsData = useSelector((store) => store.missions);
+
   useEffect(() => {
     if (!missionsData.length) {
       dispatch(getMissions());
     }
   });
+
+  // Print all the missions in a Variable
+  const listMissions = missionsData.map((missionData) => (
+    <Mission key={missionData.id} mission={missionData} />
+  ));
+
   return (
     <table>
-      <thead>
+      <thead className="thead">
         <tr>
-          <th> mession</th>
-          <th> Descriptio</th>
-          <th> Status</th>
+          <th> Mission </th>
+          <th> Description </th>
+          <th> Status </th>
         </tr>
       </thead>
-      <tbody>
-        {missionsData.map((missionData) => (
-          <Mission key={missionData.id} mission={missionData} />
-        ))}
-      </tbody>
+
+      {listMissions}
+
     </table>
   );
 };
+
 export default Missions;
