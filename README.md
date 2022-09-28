@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-<a href="#">Not available for the moment</a> 
+<a href="https://bookspacehub.netlify.app/">See it here</a> 
 
 ## Getting Started
 
