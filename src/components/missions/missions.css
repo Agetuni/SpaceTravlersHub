@@ -1,0 +1,11 @@
+body {
+  box-sizing: border-box;
+}
+
+table {
+  border: 1px solid black;
+}
+
+.container {
+  width: 80%;
+}
