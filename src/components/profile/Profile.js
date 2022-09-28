@@ -9,12 +9,28 @@ const Profile = () => {
   const rocketsData = useSelector((state) => state.rockets);
   const reservedRockets = rocketsData.filter((rocket) => rocket.reserved);
 
+  const missionsData = useSelector((state) => state.missions);
+  const joinedMissions = missionsData.filter((mission) => mission.reserved);
+
   return (
     <Container>
       <Row>
+
         <Col>
-          <p className="title">My Mission</p>
+          <p className="title">My Missions</p>
+          <Table>
+            <thead>
+              {joinedMissions.map((mission) => (
+                <tr key={mission.mission_id}>
+                  <th className="reserved">
+                    {mission.mission_name}
+                  </th>
+                </tr>
+              ))}
+            </thead>
+          </Table>
         </Col>
+
         <Col>
           <p className="title">My Rockets</p>
           <Table striped bordered hover>
@@ -29,6 +45,7 @@ const Profile = () => {
             </thead>
           </Table>
         </Col>
+
       </Row>
     </Container>
   );
