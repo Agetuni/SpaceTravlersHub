@@ -17,7 +17,7 @@ const Profile = () => {
       <Row>
 
         <Col>
-          <p className="title">My Mission</p>
+          <p className="title">My Missions</p>
           <Table>
             <thead>
               {joinedMissions.map((mission) => (
